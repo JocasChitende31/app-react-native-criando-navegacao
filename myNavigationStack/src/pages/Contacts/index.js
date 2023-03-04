@@ -6,9 +6,7 @@ export default function Contacts({navigation}){
         <View style={styles.container}>
             <Text style={styles.textContainer}>Bem-vindo aos Contactos</Text>
             <Text style={styles.textNome}>Jeorgel Chitende</Text>
-            <Text
-            onPress={()=> navigation.navigate('Information')}
-             style={styles.textDetalhes} >Information...</Text>
+            <Text onPress={()=> navigation.navigate('Information')} style={styles.textDetalhes}>Information...</Text>
         </View>
     )
 }
