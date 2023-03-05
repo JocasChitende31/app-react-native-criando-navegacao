@@ -1,22 +1,39 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-export default function Information(){
+export default function Information({ route }) {
     return (
         <View style={styels.container}>
-            <Text style={styels.textContainer}>Bem-vindo as Informações</Text>
+            <Text style={styels.titleContainer}>Informações do Contacto ({route.params.lastName})</Text>
+            <View style={styels.content}>
+                <Text style={styels.textContent}>Nome: {route.params?.nome}</Text>
+                <Text style={styels.textContent}>Telefone: {route.params?.telefone}</Text>
+                <Text style={styels.textContent}>Endereço: {route.params?.endereco}</Text>
+                <Text style={styels.textContent}>BI: {route.params?.bi}</Text>
+                <Text style={styels.textContent}>Profissão: {route.params?.profissao}</Text>
+                <Text style={styels.textContent}>Email: {route.params?.email}</Text>
+            </View>
         </View>
     )
 };
 const styels = StyleSheet.create({
-    container:{
+    container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        // alignItems: 'center',
         fontSize: 20
     },
-    textContainer:{
+    titleContainer: {
+        top: 15,
         color: 'green',
-        fontSize: 20
+        fontWeight: 'bold',
+        textAlign: 'center'
+        
+    },
+    content: {
+        left: 10,
+        top: 40
+    },
+    textContent:{
+       marginBottom:15
     }
 });
