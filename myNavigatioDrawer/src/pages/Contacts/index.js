@@ -1,15 +1,16 @@
+import 'react-native-gesture-handler';
+
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
+
 export default function Contacts({navigation}){
-    return (
-        <View style={styles.container}>
-            <Text style={styles.textContainer}>Bem-vindo aos Contactos</Text>
-            <Text style={styles.textNome}>Jeorgel Chitende</Text>
-            <Text
-            onPress={()=> navigation.navigate('Information')}
-             style={styles.textDetalhes} >Information...</Text>
-        </View>
+    return(
+            <View style={styles.container}>
+                <Text style={styles.textContainer}>Bem-vindo aos Contactos</Text>
+                <Text style={styles.textNome}>Jeorgel Chitende</Text>
+                <Text style={styles.textDetalhes} onPress={()=>navigation.navigate('Information')}>Information...</Text>
+            </View>
     )
 }
 
